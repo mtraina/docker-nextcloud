@@ -46,8 +46,8 @@ docker-compose down -v
 ```
 
 # References
-https://github.com/nextcloud/docker
-https://github.com/nextcloud/docker/tree/master/.examples/docker-compose/with-nginx-proxy/postgres/fpm
-https://github.com/docker/awesome-compose/blob/master/nextcloud-redis-mariadb/docker-compose.yaml
-https://www.docker.com/blog/awesome-compose-app-samples-for-project-dev-kickoff/
-https://www.rs-online.com/designspark/raspberry-pi-4-personal-datacentre-part-1-ansible-docker-and-nextcloud
+* https://github.com/nextcloud/docker
+* https://github.com/nextcloud/docker/tree/master/.examples/docker-compose/with-nginx-proxy/postgres/fpm
+* https://github.com/docker/awesome-compose/blob/master/nextcloud-redis-mariadb/docker-compose.yaml
+* https://www.docker.com/blog/awesome-compose-app-samples-for-project-dev-kickoff/
+* https://www.rs-online.com/designspark/raspberry-pi-4-personal-datacentre-part-1-ansible-docker-and-nextcloud
