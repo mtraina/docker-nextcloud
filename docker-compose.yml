@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:alpine
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    env_file:
+      - db.env
+
+  app:
+    image: nextcloud:fpm-alpine
+    restart: always
+    volumes:
+      - nextcloud:/var/www/html
+      - /media/ncdata/data:/var/www/html/data:rw
+    env_file:
+      - nc.env
+    depends_on:
+      - db
+
+  web:
+    build: ./web
+    restart: always
+    ports:
+      - 443:443
+    volumes:
+      - nextcloud:/var/www/html:ro
+    depends_on:
+      - app
+
+volumes:
+  db:
+  nextcloud:
