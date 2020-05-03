@@ -29,11 +29,10 @@ In case the external env variable do not work for some reason (it happened to me
 https://docs.nextcloud.com/server/latest/admin_manual/installation/installation_wizard.html#trusted-domains
 
 # Create a self-signed SSL certificate
-https://www.johnmackenzie.co.uk/post/creating-self-signed-ssl-certificates-for-docker-and-nginx/
+Indeed feel free to change the name of the certificate files, but do adjust the nginx.conf file and the web/Dockerfile in this case.
 
 ```bash
-# indeed feel free to change the name of the certificate files, but do adjust the nginx.conf file and the web/Dockerfile in this case
- openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout ./web/cloud.local.key -out ./web/cloud.local.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:4096 -keyout ./web/cloud.local.key -out ./web/cloud.local.crt
 ```
 
 # Run!
@@ -54,3 +53,4 @@ docker-compose down -v
 * https://github.com/docker/awesome-compose/blob/master/nextcloud-redis-mariadb/docker-compose.yaml
 * https://www.docker.com/blog/awesome-compose-app-samples-for-project-dev-kickoff/
 * https://www.rs-online.com/designspark/raspberry-pi-4-personal-datacentre-part-1-ansible-docker-and-nextcloud
+* https://www.johnmackenzie.co.uk/post/creating-self-signed-ssl-certificates-for-docker-and-nginx/
