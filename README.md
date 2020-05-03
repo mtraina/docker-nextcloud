@@ -43,7 +43,7 @@ docker-compose up -d
 # stop
 docker-compose down
 
-# stop and remove volums (carefully here!)
+# stop and remove volumes (be careful here!)
 docker-compose down -v
 ```
 
