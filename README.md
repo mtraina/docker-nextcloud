@@ -20,6 +20,9 @@ docker exec -it docker-nextcloud_app_1 sh
 chown -R www-data:root ./data
 ```
 
+## DB connection
+The setup uses an image of PostgreSQL as DB, please adjust the db.env and nc.env files with the (same) DB password.
+
 # Add trusted domain from within the container
 In case the external env variable do not work for some reason (it happened to me...), here how to do it from inside the container:
 
