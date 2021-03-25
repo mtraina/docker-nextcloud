@@ -3,21 +3,13 @@ Image with Nextcloud, Postgresql, Nginx, self-signed SSL certificate.
 
 # Pre-requisites
 ## External drive
-The setup assumed the usage of an external drive mounted as /media/ncdata/data, please adjust your setup accordingly or remove this etry from the docker-compose.yml, if you prefer not to use this feature.
+The setup assumed the usage of an external drive mounted as /media/ncdata/data, please adjust your setup accordingly or remove this entry from the docker-compose.yml, if you prefer not to use this feature.
 
 ```bash
 sudo mount /dev/sda1 /media/ncdata
-sudo chown -R www-data:www-data /media/ncdata/data
 
 # check if the disk is mounted properly
 mountpoint -q /media/ncdata && echo "mounted" || echo "not mounted"
-```
-
-## Add permission to the folder from within the container
-```bash
-docker exec -it docker-nextcloud_app_1 sh
-
-chown -R www-data:root ./data
 ```
 
 ## DB connection
